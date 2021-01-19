@@ -1,9 +1,134 @@
-#wholepage {
-  width: 1440px;
-  height: 100vh;
+/* vietnamese */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUA3x4RHw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUA3x4RHw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
-#background {
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+}
+
+.wholepage {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.background {
   width: 1440px;
   height: 300px;
+}
+
+.title {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  top: 15%;
+  width: 33%;
+  height: 40px;
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.todotitle {
+  font-size: 40px;
+}
+
+.title .icon {
+  width: 26px;
+  height: 26px;
+  justify-self: end;
+}
+
+.createtodo {
+  display: grid;
+  grid-template-columns: 15% 83%;
+  position: absolute;
+  background-color: #ffffff;
+  width: 33%;
+  height: 40px;
+  top: 25%;
+  border-radius: 5px;
+}
+
+.ischecked {
+  height: 40px;
+}
+
+.createtodo .createtodoinput {
+  align-self: center;
+  height: 33px;
+  border: none;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+}
+
+.createtodo .createtodoinput:focus {
+  outline: none;
 }
