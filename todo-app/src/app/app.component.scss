@@ -79,6 +79,10 @@
   justify-content: center;
 }
 
+.wholepage.dark-theme {
+  background-color: hsl(235, 21%, 11%);
+}
+
 .background {
   width: 1440px;
   height: 300px;
@@ -87,9 +91,9 @@
 .title {
   position: absolute;
   display: grid;
-  grid-template-columns: 50% 25% 25%;
+  grid-template-columns: 75% 25%;
   top: 15%;
-  width: 33%;
+  width: 45%;
   height: 40px;
   font-family: "Josefin Sans";
   font-weight: 700;
@@ -108,22 +112,50 @@
 
 .createtodo {
   display: grid;
-  grid-template-columns: 15% 83%;
-  position: absolute;
+  grid-template-columns: 15% 70% 15%;
+  height: 55px;
+}
+
+.light-theme {
   background-color: #ffffff;
-  width: 33%;
-  height: 40px;
+}
+
+.dark-theme {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+
+.initialtodo {
+  position: absolute;
   top: 25%;
+  width: 45%;
   border-radius: 5px;
 }
 
-.ischecked {
-  height: 40px;
+.newtodo {
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: hsl(233, 11%, 84%);
 }
 
-.createtodo .createtodoinput {
+.newtodo.dark-theme {
+  border-bottom-color: hsl(237, 14%, 26%);
+}
+
+.newtodo:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ischecked {
+  height: 55px;
+  display: grid;
+}
+
+.createtodoinput {
   align-self: center;
-  height: 33px;
+  font-size: 18px;
   border: none;
   font-family: "Josefin Sans";
   font-weight: 400;
@@ -131,4 +163,124 @@
 
 .createtodo .createtodoinput:focus {
   outline: none;
+}
+
+.todostr {
+  align-self: center;
+  font-size: 18px;
+}
+
+.innerstr.dark-theme {
+  color: hsl(234, 39%, 85%);
+}
+
+.deletecontainer {
+  display: grid;
+  grid-template-columns: 100%;
+  height: 55px;
+}
+
+.deletetodo {
+  justify-self: center;
+  align-self: center;
+  visibility: hidden;
+}
+
+.todolist {
+  position: absolute;
+  top: 40%;
+  width: 45%;
+  max-height: 50%;
+  border-radius: 5px;
+}
+
+.todolist.light-theme {
+  box-shadow: 5px 20px 50px hsl(236, 33%, 92%),
+    -5px 20px 50px hsl(236, 33%, 92%);
+}
+
+.todolist.dark-theme {
+  box-shadow: 5px 20px 50px #000, -5px 20px 50px #000;
+}
+
+.checkedtodo {
+  text-decoration: line-through;
+  color: hsl(233, 11%, 84%);
+}
+
+.todos {
+  max-height: calc(50vh - 50px);
+  overflow-y: auto;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  align-self: center;
+}
+
+.todosinfo {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 22% 2% 5% 5% 35%;
+  align-self: end;
+  justify-content: space-evenly;
+  align-content: center;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 12px;
+  color: hsl(236, 9%, 61%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.todosinfo .todosleft {
+  justify-self: left;
+}
+
+.todosinfo .all,
+.todosinfo .activetodos,
+.todosinfo .completed {
+  font-weight: 700;
+}
+
+.todosinfo .cleartodos {
+  justify-self: right;
+}
+
+.tipfooter {
+  position: absolute;
+  bottom: 3%;
+  font-family: "Josefin Sans";
+  width: 45%;
+  font-weight: 400;
+  font-size: 12px;
+  color: hsl(236, 9%, 61%);
+  text-align: center;
+}
+
+a:link:not(.todostr):not(.infoselected),
+a:visited:not(.todostr):not(.infoselected) {
+  color: hsl(236, 9%, 61%);
+  text-decoration: none;
+}
+
+a:link.todostr:not(.checkedtodo),
+a:visited.todostr:not(.checkedtodo),
+a:hover.todostr:not(.checkedtodo),
+a:hover:not(.todostr):not(.infoselected).light-theme,
+.cleartxt.light-theme:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover:not(.todostr):not(.infoselected):not(.cleartodos).dark-theme,
+.cleartxt.dark-theme:hover {
+  color: hsl(236, 33%, 92%);
+  text-decoration: none;
+}
+
+a:link:not(.todostr).infoselected,
+a:visited:not(.todostr).infoselected,
+a:hover:not(.todostr).infoselected {
+  color: hsl(220, 98%, 61%);
+  text-decoration: none;
 }
